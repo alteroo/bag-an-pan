@@ -2,13 +2,15 @@
   import { onMount } from "svelte";
   let posts = [];
   onMount(async () => {
-    const response = await fetch("http://localhost:8080/db/container", {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Basic cm9vdDpyb290"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+    const response = await fetch(
+      "http://localhost:8080/db/grace_chapel_container",
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Basic cm9vdDpyb290"
+        }
       }
-    });
+    );
     const json = await response.json();
     posts = json.items;
     console.log(posts);
