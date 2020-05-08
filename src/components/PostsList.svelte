@@ -22,7 +22,7 @@
   li {
     border: 1px solid #ccc;
     background-color: khaki;
-    padding: 4px 8px;
+    padding: 16px 32px;
     margin: 8px;
     list-style: none;
   }
