@@ -1,0 +1,22 @@
+<script>
+  import { onMount } from "svelte";
+  let posts = [];
+  onMount(async () => {
+    const response = await fetch("http://localhost:8080/db/container", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Basic cm9vdDpyb290"
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      }
+    });
+    const json = await response.json();
+    posts = json.items;
+    console.log(posts);
+  });
+</script>
+
+<ul>
+  {#each posts as post}
+    <li>{post['@name']}</li>
+  {/each}
+</ul>
