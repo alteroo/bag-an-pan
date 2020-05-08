@@ -3,7 +3,7 @@
   let posts = [];
   onMount(async () => {
     const response = await fetch(
-      "http://localhost:8080/db/site/grace_chapel_container",
+      "http://localhost:8080/db/grace_chapel_container",
       {
         headers: {
           "Content-Type": "application/json",
