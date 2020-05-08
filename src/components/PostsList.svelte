@@ -18,6 +18,16 @@
   });
 </script>
 
+<style>
+  li {
+    border: 1px solid #ccc;
+    background-color: khaki;
+    padding: 4px 8px;
+    margin: 8px;
+    list-style: none;
+  }
+</style>
+
 <ul>
   {#each posts as post}
     <li>{post['@name']}</li>
